@@ -6,7 +6,7 @@ class ProductTag extends Model {}
 
 ProductTag.init(
   {
-    product_tag_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -16,14 +16,14 @@ ProductTag.init(
       type: DataTypes.INTEGER,
       references: {
         model: "product",
-        id: "product_id"
+        id: "id"
       }
     },
     tag_id: {
       type: DataTypes.INTEGER,
       references: {
         model: "tag",
-        id: "tag_id"
+        id: "id"
       }
     }
   },
